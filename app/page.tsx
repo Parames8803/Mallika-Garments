@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight, Shield, Users, Phone } from "lucide-react"
@@ -145,9 +147,25 @@ export default function HomePage() {
                     <span className="text-xs sm:text-sm text-gray-500">per piece</span>
                   </div>
                   <p className="text-xs sm:text-sm text-gray-600 mb-3 sm:mb-4">Age Range: {product.ageRange}</p>
-                  <Button className="w-full text-xs sm:text-sm" size="sm" asChild>
-                    <Link href={`/products/${product.id}`}>View Details</Link>
-                  </Button>
+                  <div className="flex flex-col gap-1 sm:gap-2">
+                <Button
+                  className="w-full text-xs sm:text-sm bg-black hover:bg-gray-800 text-white"
+                  size="sm"
+                  type="button"
+                  onClick={() => {
+                    const text =
+                      `🛒 *Quick Quote Request*\n` +
+                      `-----------------------------\n` +
+                      `👕 *Product*: ${product.name}\n` +
+                      `💵 *Price*: ${product.price}\n` +
+                      (product.ageRange ? `🎂 *Age Range*: ${product.ageRange}\n` : "") +
+                      `-----------------------------`;
+                    window.open(`https://wa.me/919677971702?text=${encodeURIComponent(text)}`);
+                  }}
+                >
+                  Quick Quote
+                </Button>
+              </div>
                 </CardContent>
               </Card>
             ))}
