@@ -52,10 +52,10 @@ export function MobileNav() {
 
           <div className="border-t pt-4 mt-6 space-y-2 text-sm text-gray-600">
             <div className="flex items-center gap-2">
-              <span>📞 +1 (555) 123-4567</span>
+              <span>📞 +91 96779 71702</span>
             </div>
             <div className="flex items-center gap-2">
-              <span>✉️ sales@wholesaleclothing.com</span>
+              <span>✉️ malika.siteinfo@gmail.com</span>
             </div>
           </div>
         </div>

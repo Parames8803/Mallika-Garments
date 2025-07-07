@@ -1,4 +1,7 @@
+"use client"
+
 import { Phone, Mail, MapPin, Clock } from "lucide-react"
+import React, { useState } from "react";
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -12,28 +15,31 @@ export default function ContactPage() {
     {
       icon: Phone,
       title: "Phone",
-      details: ["+1 (555) 123-4567", "+1 (555) 987-6543"],
-      description: "Mon-Fri 9AM-6PM EST",
+      details: ["+91 96779 71702"],
+      description: "Mon-Sat 9AM-6PM",
     },
     {
       icon: Mail,
       title: "Email",
-      details: ["sales@wholesaleclothing.com", "support@wholesaleclothing.com"],
+      details: ["malika.siteinfo@gmail.com"],
       description: "We respond within 24 hours",
     },
     {
       icon: MapPin,
       title: "Address",
-      details: ["123 Fashion District", "New York, NY 10001"],
+      details: ["384/10B, PAPPA Nagar", "Cotton Mill Road, Tirupur - 641602"],
       description: "Visit our showroom",
-    },
-    {
-      icon: Clock,
-      title: "Business Hours",
-      details: ["Mon-Fri: 9AM-6PM EST", "Sat: 10AM-4PM EST"],
-      description: "Closed Sundays",
-    },
+    }
+    // {
+    //   icon: Clock,
+    //   title: "Business Hours",
+    //   details: ["Mon-Sat: 9AM-6PM"],
+    //   description: "Closed Sundays",
+    // },
   ]
+
+  const [businessType, setBusinessType] = useState("");
+  const [businessTypeLabel, setBusinessTypeLabel] = useState("");
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -57,35 +63,39 @@ export default function ContactPage() {
             </CardHeader>
             <CardContent className="space-y-6">
               <div className="grid sm:grid-cols-2 gap-4">
-                <div>
-                  <Label htmlFor="firstName">First Name *</Label>
-                  <Input id="firstName" placeholder="John" required />
-                </div>
-                <div>
-                  <Label htmlFor="lastName">Last Name *</Label>
-                  <Input id="lastName" placeholder="Doe" required />
+                <div className="sm:col-span-2 flex gap-4">
+                  <div className="w-1/2">
+                    <Label htmlFor="firstName">First Name *</Label>
+                    <Input id="firstName" placeholder="John" required />
+                  </div>
+                  <div className="w-1/2">
+                    <Label htmlFor="lastName">Last Name *</Label>
+                    <Input id="lastName" placeholder="Doe" required />
+                  </div>
                 </div>
               </div>
 
               <div className="grid sm:grid-cols-2 gap-4">
-                <div>
-                  <Label htmlFor="email">Email *</Label>
-                  <Input id="email" type="email" placeholder="john@example.com" required />
-                </div>
                 <div>
                   <Label htmlFor="phone">Phone</Label>
-                  <Input id="phone" type="tel" placeholder="+1 (555) 123-4567" />
-                </div>
-              </div>
-
-              <div className="grid sm:grid-cols-2 gap-4">
-                <div>
-                  <Label htmlFor="company">Company Name *</Label>
-                  <Input id="company" placeholder="Your Business Name" required />
+                  <Input id="phone" type="tel" placeholder="+91 1234567890" />
                 </div>
                 <div>
                   <Label htmlFor="businessType">Business Type</Label>
-                  <Select>
+                  <Select
+                    value={businessType}
+                    onValueChange={(val) => {
+                      setBusinessType(val);
+                      const labelMap: Record<string, string> = {
+                        retail: "Retail Store",
+                        online: "Online Store",
+                        boutique: "Boutique",
+                        distributor: "Distributor",
+                        other: "Other",
+                      };
+                      setBusinessTypeLabel(labelMap[val as keyof typeof labelMap] || "");
+                    }}
+                  >
                     <SelectTrigger>
                       <SelectValue placeholder="Select business type" />
                     </SelectTrigger>
@@ -100,7 +110,7 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <div>
+              {/* <div>
                 <Label htmlFor="country">Country *</Label>
                 <Select>
                   <SelectTrigger>
@@ -114,9 +124,9 @@ export default function ContactPage() {
                     <SelectItem value="other">Other</SelectItem>
                   </SelectContent>
                 </Select>
-              </div>
+              </div> */}
 
-              <div>
+              {/* <div>
                 <Label htmlFor="products">Products of Interest</Label>
                 <Select>
                   <SelectTrigger>
@@ -162,18 +172,37 @@ export default function ContactPage() {
                     </SelectContent>
                   </Select>
                 </div>
-              </div>
+              </div> */}
 
               <div>
                 <Label htmlFor="message">Message</Label>
                 <Textarea
                   id="message"
-                  placeholder="Tell us about your business needs, specific requirements, or any questions you have..."
+                  placeholder="Example Style No 1, Style No 2, Style No 3, etc.. and Quantity"
                   rows={4}
                 />
               </div>
 
-              <Button size="lg" className="w-full bg-emerald-600 hover:bg-emerald-700 text-sm sm:text-base">
+              <Button
+                size="lg"
+                className="w-full bg-emerald-600 hover:bg-emerald-700 text-sm sm:text-base"
+                type="button"
+                onClick={() => {
+                  const firstName = (document.getElementById('firstName') as HTMLInputElement)?.value || '';
+                  const lastName = (document.getElementById('lastName') as HTMLInputElement)?.value || '';
+                  const phone = (document.getElementById('phone') as HTMLInputElement)?.value || '';
+                  const message = (document.getElementById('message') as HTMLTextAreaElement)?.value || '';
+                  const text =
+                    `📝 *New Quote Request*\n` +
+                    `-----------------------------\n` +
+                    `👤 *Name*: ${firstName} ${lastName}\n` +
+                    `📞 *Phone*: ${phone}\n` +
+                    `🏢 *Business Type*: ${businessTypeLabel || '-'}\n` +
+                    `💬 *Message*: ${message || '-'}\n` +
+                    `-----------------------------`;
+                  window.open(`https://wa.me/919677971702?text=${encodeURIComponent(text)}`);
+                }}
+              >
                 Send Quote Request
               </Button>
 
@@ -211,7 +240,7 @@ export default function ContactPage() {
             </CardContent>
           </Card>
 
-          <Card>
+          {/* <Card>
             <CardHeader>
               <CardTitle>Why Choose Us?</CardTitle>
             </CardHeader>
@@ -245,13 +274,13 @@ export default function ContactPage() {
                 </div>
               </div>
             </CardContent>
-          </Card>
+          </Card> */}
 
           <Card className="bg-emerald-50 border-emerald-200">
             <CardContent className="p-6 text-center">
               <h3 className="font-semibold text-emerald-900 mb-2">Need Immediate Assistance?</h3>
               <p className="text-emerald-700 text-sm mb-4">Call our sales team directly for urgent inquiries</p>
-              <Button className="bg-emerald-600 hover:bg-emerald-700">Call Now: +1 (555) 123-4567</Button>
+              <Button className="bg-emerald-600 hover:bg-emerald-700">Call Now: +91 96779 71702</Button>
             </CardContent>
           </Card>
         </div>

@@ -5,38 +5,11 @@ import { ArrowRight, Shield, Users, Phone } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { products, Product } from "./products/data"
 
 export default function HomePage() {
-  const featuredProducts = [
-    {
-      id: 1,
-      name: "STYLE NO 13",
-      image: "/IMG-20250618-WA0071.jpg",
-      price: "₹38",
-      ageRange: "2-8 years",
-    },
-    {
-      id: 2,
-      name: "STYLE NO 15",
-      image: "/IMG-20250618-WA0072.jpg",
-      price: "₹38",
-      ageRange: "3-10 years",
-    },
-    {
-      id: 3,
-      name: "STYLE NO 14",
-      image: "/IMG-20250618-WA0073.jpg",
-      price: "₹38",
-      ageRange: "1-6 years",
-    },
-    {
-      id: 4,
-      name: "S.T.SHIRT S,M,L",
-      image: "/IMG-20250618-WA0074.jpg",
-      price: "₹88",
-      ageRange: "4-12 years",
-    },
-  ]
+  // Pick the first 4 products as featured
+  const featuredProducts: Product[] = products.slice(0, 4)
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -49,7 +22,7 @@ export default function HomePage() {
               <div className="space-y-4">
                 <Badge className="bg-emerald-600 hover:bg-emerald-700">Kids Fashion</Badge>
                 <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold leading-tight">
-                  Premium Kids Fashion
+                  Kids Clothing Manufacturer
                   <span className="text-emerald-400"></span>
                 </h1>
                 <p className="text-xl text-gray-300 leading-relaxed">
@@ -66,7 +39,7 @@ export default function HomePage() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-white text-white hover:bg-white hover:text-slate-900"
+                  className="border-white text-black hover:bg-white hover:text-slate-900"
                   asChild
                 >
                   <Link href="/contact">Get Quote</Link>
@@ -75,7 +48,7 @@ export default function HomePage() {
             </div>
             <div className="relative">
               <Image
-                src="/placeholder.svg?height=500&width=500"
+                src="/IMG_3310.jpg?height=500&width=500"
                 alt="Fashion Collection"
                 width={500}
                 height={500}
@@ -123,7 +96,7 @@ export default function HomePage() {
                 <div className="mx-auto w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
                   <Users className="h-6 w-6 text-purple-600" />
                 </div>
-                <CardTitle>Easy Returns</CardTitle>
+                <CardTitle>Quality Assurance</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600">Better prices for larger quantities</p>
@@ -195,14 +168,6 @@ export default function HomePage() {
           <div className="flex flex-col gap-3 sm:flex-row sm:gap-4 justify-center">
             <Button size="lg" className="bg-white text-emerald-600 hover:bg-gray-100" asChild>
               <Link href="/contact">Get Started Today</Link>
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-white text-white hover:bg-white hover:text-emerald-600"
-              asChild
-            >
-              <Link href="/about">Learn More</Link>
             </Button>
           </div>
         </div>

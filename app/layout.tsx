@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import Link from "next/link"
 import { ShoppingBag, Phone, Mail, MapPin } from "lucide-react"
+import Image from "next/image"
 
 import "./globals.css"
 import { Button } from "@/components/ui/button"
@@ -34,27 +35,29 @@ export default function RootLayout({
               <div className="flex items-center gap-6">
                 <div className="flex items-center gap-2">
                   <Phone className="h-4 w-4" />
-                  <span>+1 (555) 123-4567</span>
+                  <span>+91 96779 71702</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Mail className="h-4 w-4" />
-                  <span>sales@wholesaleclothing.com</span>
+                  <span>malika.siteinfo@gmail.com</span>
                 </div>
               </div>
-              <div className="flex items-center gap-4">
-                <span>Free shipping on orders over $50</span>
-                <Separator orientation="vertical" className="h-4" />
-                <Link href="/contact" className="hover:text-emerald-600">
-                  Get Quote
-                </Link>
+              <div className="flex items-center gap-2">
+                <b>GSTIN:</b><span>33CDAPS6339B1ZS</span>
               </div>
             </div>
 
             {/* Main Navigation */}
             <div className="flex items-center justify-between py-4">
               <Link href="/" className="flex items-center gap-2 text-xl font-bold text-gray-900">
-                <ShoppingBag className="h-8 w-8 text-emerald-600" />
-                <span>Malika Garments</span>
+                <Image
+                  src="/logo.jpg"
+                  alt="Mallika Garments Logo"
+                  width={100}
+                  height={100}
+                  className="h-100 w-100 object-contain"
+                />
+                <span>Mallika Garments</span>
               </Link>
 
               {/* Desktop Navigation */}
@@ -100,122 +103,55 @@ export default function RootLayout({
         {/* Footer */}
         <footer className="bg-gray-900 text-white">
           <div className="container mx-auto px-4 py-12">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+            <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-10 md:gap-0">
               {/* Company Info */}
-              <div>
+              <div className="flex-1 mb-8 md:mb-0 md:pr-8 border-b md:border-b-0 md:border-r border-gray-800 pb-8 md:pb-0">
                 <div className="flex items-center gap-2 mb-4">
-                  <ShoppingBag className="h-6 w-6 text-emerald-400" />
-                  <span className="text-xl font-bold">Malika Garments</span>
+                  <span className="text-xl font-bold">Mallika Garments</span>
                 </div>
                 <p className="text-gray-400 mb-4">
-                  Your trusted destination for premium kids' clothing. Quality fashion that's safe, comfortable, and fun
-                  for children.
+                  Your trusted destination for premium kids' clothing. Quality fashion that's safe, comfortable, and fun for children.
                 </p>
                 <div className="space-y-2 text-sm text-gray-400">
                   <div className="flex items-center gap-2">
                     <MapPin className="h-4 w-4" />
-                    <span>123 Fashion District, NY 10001</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Phone className="h-4 w-4" />
-                    <span>+1 (555) 123-4567</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Mail className="h-4 w-4" />
-                    <span>sales@wholesaleclothing.com</span>
+                    <span>384/10B, PAPPA Nagar, Cotton Mill Road, Tirupur - 641602</span>
                   </div>
                 </div>
               </div>
 
               {/* Quick Links */}
-              <div>
+              <div className="flex-1 mb-8 md:mb-0 md:px-8 border-b md:border-b-0 md:border-r border-gray-800 pb-8 md:pb-0">
                 <h3 className="font-semibold mb-4">Quick Links</h3>
                 <ul className="space-y-2 text-gray-400">
                   <li>
-                    <Link href="/" className="hover:text-white">
-                      Home
-                    </Link>
+                    <Link href="/" className="hover:text-white">Home</Link>
                   </li>
                   <li>
-                    <Link href="/products" className="hover:text-white">
-                      Products
-                    </Link>
+                    <Link href="/products" className="hover:text-white">Products</Link>
                   </li>
                   <li>
-                    <Link href="/about" className="hover:text-white">
-                      About Us
-                    </Link>
+                    <Link href="/about" className="hover:text-white">About Us</Link>
                   </li>
                   <li>
-                    <Link href="/contact" className="hover:text-white">
-                      Contact
-                    </Link>
+                    <Link href="/contact" className="hover:text-white">Contact</Link>
                   </li>
                 </ul>
               </div>
 
-              {/* Categories */}
-              <div>
-                <h3 className="font-semibold mb-4">Categories</h3>
-                <ul className="space-y-2 text-gray-400">
-                  <li>
-                    <Link href="/products" className="hover:text-white">
-                      T-Shirts
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/products" className="hover:text-white">
-                      Hoodies
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/products" className="hover:text-white">
-                      Dresses
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/products" className="hover:text-white">
-                      Pants
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/products" className="hover:text-white">
-                      Pajamas
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-
-              {/* Support */}
-              <div>
-                <h3 className="font-semibold mb-4">Support</h3>
-                <ul className="space-y-2 text-gray-400">
-                  <li>
-                    <Link href="/contact" className="hover:text-white">
-                      Get Quote
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="#" className="hover:text-white">
-                      Shipping Info
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="#" className="hover:text-white">
-                      Size Guide
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="#" className="hover:text-white">
-                      Returns
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="#" className="hover:text-white">
-                      FAQ
-                    </Link>
-                  </li>
-                </ul>
+              {/* Contact Info */}
+              <div className="flex-1 md:pl-8">
+                <h3 className="font-semibold mb-4">Contact</h3>
+                <div className="space-y-2 text-sm text-gray-400">
+                  <div className="flex items-center gap-2">
+                    <Phone className="h-4 w-4" />
+                    <span>+91 96779 71702</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Mail className="h-4 w-4" />
+                    <span>malika.siteinfo@gmail.com</span>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -223,19 +159,20 @@ export default function RootLayout({
 
             <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
               <div className="text-center md:text-left">
-                <p>&copy; 2024 WholesaleClothing. All rights reserved.</p>
-                <p className="text-xs text-gray-500 mt-1">Powered by Hynox</p>
+                <p>&copy; 2024 Mallika Garments. All rights reserved.</p>
+                <a
+                  href="https://hynox.in"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs mt-1 hover:text-emerald-600 cursor-pointer"
+                >
+                  Powered by Hynox
+                </a>
               </div>
               <div className="flex gap-6 mt-4 md:mt-0">
-                <Link href="#" className="hover:text-white">
-                  Privacy Policy
-                </Link>
-                <Link href="#" className="hover:text-white">
-                  Terms of Service
-                </Link>
-                <Link href="#" className="hover:text-white">
-                  Cookie Policy
-                </Link>
+                <Link href="#" className="hover:text-white">Privacy Policy</Link>
+                <Link href="#" className="hover:text-white">Terms of Service</Link>
+                <Link href="#" className="hover:text-white">Cookie Policy</Link>
               </div>
             </div>
           </div>

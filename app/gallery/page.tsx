@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
 
@@ -13,23 +14,23 @@ export default function GalleryPage() {
     },
     {
       id: 2,
-      src: "/placeholder.svg?height=400&width=400",
+      src: "/IMG_3290.jpg?height=400&width=400",
       title: "Quality Control Department",
-      category: "Quality",
+      category: "Quality Check",
       description: "Rigorous quality testing and inspection processes",
     },
     {
       id: 3,
-      src: "/placeholder.svg?height=400&width=400",
+      src: "/IMG_3302.jpg?height=400&width=400",
       title: "Automated Warehouse",
       category: "Warehouse",
       description: "Efficient storage and inventory management systems",
     },
     {
       id: 4,
-      src: "/placeholder.svg?height=400&width=400",
+      src: "/IMG_3319.jpg?height=400&width=400",
       title: "Design Studio",
-      category: "Design",
+      category: "Stiching Unit",
       description: "Creative workspace where our designers craft new collections",
     },
     {
@@ -41,16 +42,16 @@ export default function GalleryPage() {
     },
     {
       id: 6,
-      src: "/placeholder.svg?height=400&width=400",
+      src: "/IMG_3291.jpg?height=400&width=400",
       title: "Fabric Testing Laboratory",
-      category: "Testing",
+      category: "Ironing",
       description: "Advanced testing for safety, durability, and comfort",
     },
     {
       id: 7,
-      src: "/placeholder.svg?height=400&width=400",
+      src: "/IMG_3322.jpg?height=400&width=400",
       title: "Customer Service Center",
-      category: "Support",
+      category: "Stock uniting",
       description: "Dedicated team providing 24/7 customer support",
     },
     {
@@ -100,26 +101,18 @@ export default function GalleryPage() {
       {/* Gallery Grid */}
       <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 lg:gap-6">
         {galleryImages.map((image) => (
-          <Card key={image.id} className="group overflow-hidden hover:shadow-xl transition-all duration-300">
-            <div className="relative overflow-hidden">
+          <Card key={image.id} className="group overflow-hidden hover:shadow-xl transition-all duration-300 p-0">
+            <div className="relative w-full h-48 sm:h-64 lg:h-80 xl:h-[400px]">
               <Image
-                src={image.src || "/placeholder.svg"}
-                alt={image.title}
-                width={400}
-                height={400}
-                className="w-full h-32 sm:h-40 lg:h-56 xl:h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                src={image.src}
+                alt="Gallery Placeholder"
+                fill
+                className="object-cover w-full h-full"
               />
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300" />
-              <Badge className="absolute top-1 sm:top-2 lg:top-4 left-1 sm:left-2 lg:left-4 bg-emerald-600 text-xs">
+              <Badge className="absolute top-2 left-2 bg-emerald-600 text-xs z-10">
                 {image.category}
               </Badge>
             </div>
-            <CardContent className="p-2 sm:p-3 lg:p-4">
-              <h3 className="font-semibold text-xs sm:text-sm lg:text-base xl:text-lg mb-1 sm:mb-2 text-gray-900 line-clamp-2">
-                {image.title}
-              </h3>
-              <p className="text-xs sm:text-sm text-gray-600 line-clamp-2 hidden sm:block">{image.description}</p>
-            </CardContent>
           </Card>
         ))}
       </div>
@@ -132,12 +125,12 @@ export default function GalleryPage() {
           safety, and comfort for your little ones.
         </p>
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-          <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-lg font-medium transition-colors">
-            Schedule a Tour
-          </button>
-          <button className="border border-emerald-600 text-emerald-600 hover:bg-emerald-50 px-6 py-3 rounded-lg font-medium transition-colors">
+          <Link
+            href="/contact"
+            className="border border-emerald-600 text-emerald-600 hover:bg-emerald-50 px-6 py-3 rounded-lg font-medium transition-colors text-center"
+          >
             Contact Us
-          </button>
+          </Link>
         </div>
       </div>
     </div>

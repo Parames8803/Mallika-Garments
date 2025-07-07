@@ -7,8 +7,8 @@ import { Badge } from "@/components/ui/badge"
 export default function AboutPage() {
   const stats = [
     { icon: Users, label: "Happy Customers", value: "10,000+" },
-    { icon: Globe, label: "Countries Served", value: "50+" },
-    { icon: Award, label: "Years Experience", value: "15+" },
+    { icon: Globe, label: "States Served", value: "28+" },
+    { icon: Award, label: "Years Experience", value: "9+" },
     { icon: Clock, label: "Orders Processed", value: "100K+" },
   ]
 
@@ -46,7 +46,7 @@ export default function AboutPage() {
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">About Our Company</h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
           We are a leading wholesale clothing supplier dedicated to providing high-quality fashion at competitive
-          prices. With over 15 years of experience, we serve retailers worldwide with exceptional products and service.
+          prices. With over 9+ years of experience, we serve retailers worldwide with exceptional products and service.
         </p>
       </section>
 
@@ -74,7 +74,7 @@ export default function AboutPage() {
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Story</h2>
             <div className="space-y-4 text-gray-600">
               <p>
-                Founded in 2008, our company started as a small family business with a vision to make high-quality
+                Founded in 2017, our company started as a small family business with a vision to make high-quality
                 fashion accessible to retailers of all sizes. What began as a local operation has grown into a global
                 wholesale network.
               </p>
@@ -144,12 +144,12 @@ export default function AboutPage() {
                 <div className="w-8 h-8 bg-emerald-100 rounded-lg flex items-center justify-center">
                   <Globe className="h-4 w-4 text-emerald-600" />
                 </div>
-                Global Reach
+                All over India Reach
               </CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-gray-600">
-                With shipping to over 50 countries, we make it easy for businesses worldwide to access premium wholesale
+                With shipping to over 28 States, we make it easy for businesses domestic to access premium wholesale
                 clothing.
               </p>
             </CardContent>
@@ -158,7 +158,7 @@ export default function AboutPage() {
       </section>
 
       {/* Team Section */}
-      <section className="mb-16">
+      {/* <section className="mb-16">
         <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Meet Our Team</h2>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
           {team.map((member, index) => (
@@ -180,7 +180,7 @@ export default function AboutPage() {
             </Card>
           ))}
         </div>
-      </section>
+      </section> */}
 
       {/* Mission Section */}
       <section className="bg-emerald-50 rounded-lg p-8 text-center">
