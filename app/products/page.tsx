@@ -9,6 +9,7 @@ import { Input } from "@/components/ui/input"
 import { Badge } from "@/components/ui/badge"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { products, Product } from "./data"
+import { openWhatsAppQuote } from "@/lib/utils"
 
 export default function ProductsPage() {
   const categories = [
@@ -108,16 +109,7 @@ export default function ProductsPage() {
                   className="w-full text-xs sm:text-sm bg-black hover:bg-gray-800 text-white"
                   size="sm"
                   type="button"
-                  onClick={() => {
-                    const text =
-                      `🛒 *Quick Quote Request*\n` +
-                      `-----------------------------\n` +
-                      `👕 *Product*: ${product.name}\n` +
-                      `💵 *Price*: ${product.price}\n` +
-                      (product.ageRange ? `🎂 *Age Range*: ${product.ageRange}\n` : "") +
-                      `-----------------------------`;
-                    window.open(`https://wa.me/919677971702?text=${encodeURIComponent(text)}`);
-                  }}
+                  onClick={() => openWhatsAppQuote(product)}
                 >
                   Quick Quote
                 </Button>

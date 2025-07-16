@@ -51,13 +51,13 @@ export default function RootLayout({
             <div className="flex items-center justify-between py-4">
               <Link href="/" className="flex items-center gap-2 text-xl font-bold text-gray-900">
                 <Image
-                  src="/logo.jpg"
+                  src="/logo.png"
                   alt="Mallika Garments Logo"
                   width={100}
                   height={100}
                   className="h-100 w-100 object-contain"
                 />
-                <span>Mallika Garments</span>
+                {/* <span>Mallika Garments</span> */}
               </Link>
 
               {/* Desktop Navigation */}

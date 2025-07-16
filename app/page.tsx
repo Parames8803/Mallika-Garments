@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { products, Product } from "./products/data"
+import { openWhatsAppQuote } from "@/lib/utils"
 
 export default function HomePage() {
   // Pick the first 4 products as featured
@@ -130,13 +131,13 @@ export default function HomePage() {
             {featuredProducts.map((product) => (
               <Card key={product.id} className="group hover:shadow-xl transition-shadow duration-300">
                 <CardHeader className="p-0">
-                  <div className="relative overflow-hidden rounded-t-lg">
+                  <div className="relative overflow-hidden rounded-t-lg bg-white flex items-center justify-center">
                     <Image
                       src={product.image || "/placeholder.svg"}
                       alt={product.name}
                       width={300}
                       height={300}
-                      className="w-full h-32 sm:h-48 lg:h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                      className="w-full h-32 sm:h-48 lg:h-64 object-contain group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
                 </CardHeader>
@@ -152,16 +153,7 @@ export default function HomePage() {
                   className="w-full text-xs sm:text-sm bg-black hover:bg-gray-800 text-white"
                   size="sm"
                   type="button"
-                  onClick={() => {
-                    const text =
-                      `🛒 *Quick Quote Request*\n` +
-                      `-----------------------------\n` +
-                      `👕 *Product*: ${product.name}\n` +
-                      `💵 *Price*: ${product.price}\n` +
-                      (product.ageRange ? `🎂 *Age Range*: ${product.ageRange}\n` : "") +
-                      `-----------------------------`;
-                    window.open(`https://wa.me/919677971702?text=${encodeURIComponent(text)}`);
-                  }}
+                  onClick={() => openWhatsAppQuote(product)}
                 >
                   Quick Quote
                 </Button>

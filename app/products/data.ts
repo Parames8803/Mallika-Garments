@@ -10,221 +10,253 @@ export const products: Product[] = [
   {
     id: 1,
     name: "STYLE NO 13",
-    image: "/IMG-20250618-WA0071.jpg",
+    image: "/style13.png",
     price: "₹38",
-    ageRange: "2-8 years",
+    ageRange: "1 year - 1.75/2 years",
   },
   {
     id: 2,
     name: "STYLE NO 15",
-    image: "/IMG-20250618-WA0072.jpg",
+    image: "/style15.png",
     price: "₹38",
-    ageRange: "3-10 years",
+    ageRange: "1 year - 1.75/2 years",
   },
   {
     id: 3,
     name: "STYLE NO 14",
-    image: "/IMG-20250618-WA0073.jpg",
+    image: "/style14.png",
     price: "₹38",
-    ageRange: "1-6 years",
+    ageRange: "1 year - 1.75/2 years",
   },
   {
     id: 4,
     name: "S.T.SHIRT S,M,L",
-    image: "/IMG-20250618-WA0074.jpg",
+    image: "/stshirtsml.png",
     price: "₹88",
-    ageRange: "4-12 years",
+    ageRange: "S: 1.30 - 2.30, M: 2.30 - 3.30, L: 3.30 - 5",
   },
   {
     id: 5,
     name: "S,M,L",
-    image: "/IMG-20250618-WA0075.jpg",
+    image: "/sml.png",
     price: "₹88",
+    ageRange: "S: 1.30 - 2.30, M: 2.30 - 3.30, L: 3.30 - 5",
   },
   {
     id: 6,
     name: "STYLE NO 10",
-    image: "/IMG-20250618-WA0076.jpg",
+    image: "/style10.png",
     price: "₹73",
+    ageRange: "1 year - 1.75/2 years",
   },
   {
     id: 7,
     name: "S,M,L ",
-    image: "/IMG-20250618-WA0077.jpg",
+    image: "/sml2.png",
     price: "₹88",
+    ageRange: "S: 1.30 - 2.30, M: 2.30 - 3.30, L: 3.30 - 5",
   },
   {
     id: 8,
     name: "STYLE NO 35",
-    image: "/IMG-20250618-WA0078.jpg",
+    image: "/style35.png",
     price: "₹40",
+    ageRange: "1 year - 1.75/2 years",
   },
   {
     id: 9,
     name: "STYLE NO 30",
-    image: "/IMG-20250618-WA0079.jpg",
-    price: "₹38"
+    image: "/style30.png",
+    price: "₹38",
+    ageRange: "1 year - 1.75/2 years"
   },
   {
     id: 10,
     name: "STYLE NO 22",
-    image: "/IMG-20250618-WA0080.jpg",
-    price: "₹73"
+    image: "/style22.png",
+    price: "₹73",
+    ageRange: "1 year - 1.75/2 years"
   },
   {
     id: 11,
     name: "STYLE NO 19",
-    image: "/IMG-20250618-WA0081.jpg",
-    price: "₹73"
+    image: "/style19.png",
+    price: "₹73",
+    ageRange: "1 year - 1.75/2 years"
   },
   {
     id: 12,
     name: "STYLE NO 18",
-    image: "/IMG-20250618-WA0082.jpg",
-    price: "₹63"
+    image: "/style18.png",
+    price: "₹63",
+    ageRange: "1 year - 1.75/2 years"
   },
   {
     id: 13,
     name: "STYLE NO 25",
-    image: "/IMG-20250618-WA0083.jpg",
-    price: "₹63"
+    image: "/style25.png",
+    price: "₹63",
+    ageRange: "1 year - 1.75/2 years"
   },
   {
     id: 14,
     name: "STYLE NO 25",
-    image: "/IMG-20250618-WA0084.jpg",
-    price: "₹63"
+    image: "/style252.png",
+    price: "₹63",
+    ageRange: "1 year - 1.75/2 years"
   },
   {
     id: 15,
     name: "STYLE NO 25",
-    image: "/IMG-20250618-WA0085.jpg",
-    price: "₹63"
+    image: "/style253.png",
+    price: "₹63",
+    ageRange: "1 year - 1.75/2 years"
   },
   {
     id: 16,
     name: "STYLE NO 26",
-    image: "/IMG-20250618-WA0086.jpg",
-    price: "₹66"
+    image: "/style26.png",
+    price: "₹66",
+    ageRange: "1 year - 1.75/2 years"
   },
   {
     id: 17,
     name: "STYLE NO 17",
-    image: "/IMG-20250618-WA0087.jpg",
-    price: "₹63"
+    image: "/style17.png",
+    price: "₹63",
+    ageRange: "1 year - 1.75/2 years"
   },
   {
     id: 18,
     name: "STYLE NO 16",
     image: "/IMG-20250618-WA0088.jpg",
-    price: "₹63"
+    price: "₹63",
+    ageRange: "1 year - 1.75/2 years"
   },
   {
     id: 19,
     name: "STYLE NO 24",
-    image: "/IMG-20250618-WA0089.jpg",
-    price: "₹73"
+    image: "/style24.png",
+    price: "₹73",
+    ageRange: "1 year - 1.75/2 years"
   },
   {
     id: 20,
     name: "STYLE NO 34",
-    image: "/IMG-20250618-WA0090.jpg",
-    price: "₹66"
+    image: "/style34.png",
+    price: "₹66",
+    ageRange: "1 year - 1.75/2 years"
   },
   {
     id: 21,
     name: "STYLE NO 29",
-    image: "/IMG-20250618-WA0091.jpg",
-    price: "₹63"
+    image: "/style29.png",
+    price: "₹63",
+    ageRange: "1 year - 1.75/2 years"
   },
   {
     id: 22,
     name: "STYLE NO 27",
-    image: "/IMG-20250618-WA0092.jpg",
-    price: "₹66"
+    image: "/style27.png",
+    price: "₹66",
+    ageRange: "1 year - 1.75/2 years"
   },
   {
     id: 23,
     name: "STYLE NO 1",
-    image: "/IMG-20250618-WA0093.jpg",
-    price: "₹20"
+    image: "/style1.png",
+    price: "₹20",
+    ageRange: "Just Born - 1 year"
   },
   {
     id: 24,
     name: "STYLE NO 31",
-    image: "/IMG-20250618-WA0094.jpg",
-    price: "₹58"
+    image: "/style31.png",
+    price: "₹58",
+    ageRange: "1 year - 1.75/2 years"
   },
   {
     id: 25,
     name: "STYLE NO 32",
-    image: "/IMG-20250618-WA0095.jpg",
-    price: "₹58"
+    image: "/style32.png",
+    price: "₹58",
+    ageRange: "1 year - 1.75/2 years"
   },
   {
     id: 26,
     name: "STYLE NO 07",
-    image: "/IMG-20250618-WA0096.jpg",
-    price: "₹30"
+    image: "/style7.png",
+    price: "₹30",
+    ageRange: "Just Born - 1 year"
   },
   {
     id: 27,
     name: "STYLE NO 5",
-    image: "/IMG-20250618-WA0097.jpg",
-    price: "₹27"
+    image: "/style5.png",
+    price: "₹27",
+    ageRange: "Just Born - 1 year"
   },
   {
     id: 28,
     name: "STYLE NO 06",
-    image: "/IMG-20250618-WA0098.jpg",
-    price: "₹28"
+    image: "/style6.png",
+    price: "₹28",
+    ageRange: "Just Born - 1 year"
   },
   {
     id: 29,
     name: "STYLE NO 8",
-    image: "/IMG-20250618-WA0099.jpg",
-    price: "₹30"
+    image: "/style8.png",
+    price: "₹30",
+    ageRange: "Just Born - 1 year"
   },
   {
     id: 30,
     name: "STYLE NO 3",
-    image: "/IMG-20250618-WA0100.jpg",
-    price: "₹24"
+    image: "/style3.png",
+    price: "₹24",
+    ageRange: "Just Born - 1 year"
   },
   {
     id: 31,
     name: "STYLE NO 2",
-    image: "/IMG-20250618-WA0102.jpg",
-    price: "₹23"
+    image: "/style2.png",
+    price: "₹23",
+    ageRange: "Just Born - 1 year"
   },
   {
     id: 32,
     name: "STYLE NO 11",
-    image: "/IMG-20250618-WA00103.jpg",
-    price: "₹58"
+    image: "/style11.png",
+    price: "₹58",
+    ageRange: "1 year - 1.75/2 years"
   },
   {
     id: 33,
     name: "STYLE NO 28",
-    image: "/IMG-20250618-WA00104.jpg",
-    price: "₹73"
+    image: "/style28.png",
+    price: "₹73",
+    ageRange: "1 year - 1.75/2 years"
   },
   {
     id: 34,
     name: "STYLE NO 1 PRINTING ",
-    image: "/IMG-20250618-WA0105.jpg",
-    price: "₹18"
+    image: "/style1printing.png",
+    price: "₹18",
+    ageRange: "Just Born - 1 year"
   },
   {
     id: 35,
     name: "STYLE NO 4",
-    image: "/IMG-20250618-WA0106.jpg",
-    price: "₹27"
+    image: "/style4.png",
+    price: "₹27",
+    ageRange: "Just Born - 1 year"
   },
   {
     id: 36,
     name: "STYLE NO 2 PRINTING ",
-    image: "/IMG-20250618-WA0107.jpg",
-    price: "₹20"
+    image: "/style2printing.png",
+    price: "₹20",
+    ageRange: "Just Born - 1 year"
   },
 ]; 
