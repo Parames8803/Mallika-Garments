@@ -147,7 +147,6 @@ export default function HomePage() {
                     <span className="text-lg sm:text-xl lg:text-2xl font-bold text-emerald-600">{product.price}</span>
                     <span className="text-xs sm:text-sm text-gray-500">per piece</span>
                   </div>
-                  <p className="text-xs sm:text-sm text-gray-600 mb-3 sm:mb-4">Age Range: {product.ageRange}</p>
                   <div className="flex flex-col gap-1 sm:gap-2">
                 <Button
                   className="w-full text-xs sm:text-sm bg-black hover:bg-gray-800 text-white"

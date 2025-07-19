@@ -103,7 +103,6 @@ export default function ProductsPage() {
                   {product.price}
                 </span>
               </div>
-              <p className="text-xs sm:text-sm text-gray-600 mb-2 sm:mb-3">Age Range: {product.ageRange}</p>
               <div className="flex flex-col gap-1 sm:gap-2">
                 <Button
                   className="w-full text-xs sm:text-sm bg-black hover:bg-gray-800 text-white"
