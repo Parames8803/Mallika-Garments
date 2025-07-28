@@ -43,7 +43,10 @@ export default function RootLayout({
                 </div>
               </div>
               <div className="flex items-center gap-2">
-                <b>GSTIN:</b><span>33CDAPS6339B1ZS</span>
+                <b>
+                  <span>GSTIN:</span>
+                </b>
+                <span>33CDAPS6339B1ZS</span>
               </div>
             </div>
 

@@ -51,7 +51,7 @@ export default function HomePage() {
             </div>
             <div className="relative">
               <Image
-                src="/IMG_3310.jpg?height=500&width=500"
+                src="/IMG_3310.jpg"
                 alt="Fashion Collection"
                 width={500}
                 height={500}
